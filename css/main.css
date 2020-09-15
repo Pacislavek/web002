@@ -52,3 +52,21 @@ body {
   width: 100%;
   height: 25vh;
 }
+
+#services .container-fluid {
+  padding: 0;
+}
+
+.services-deck {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 227px;
+}
+
+.service {
+  display: block;
+  width: 19.5%;
+  height: 100%;
+  background-color: black;
+}
