@@ -30,25 +30,45 @@
 <body data-spy="scroll" data-target="#navbar-spy" data-offset="73">
 
   <!--NAVBAR-->
-  <section id="menu">
+
+  <input id="page-nav-toggle" class="main-navigation-toggle" type="checkbox" />
+  <label for="page-nav-toggle">
+   <span class="menu-name">Menu</span>
+    <svg class="icon--menu-toggle" viewBox="0 0 60 30">
+      <g class="icon-group">
+        <g class="icon--menu">
+          <path d="M 6 0 L 54 0" />
+          <path d="M 6 15 L 54 15" />
+          <path d="M 6 30 L 54 30" />
+        </g>
+        <g class="icon--close">
+          <path d="M 15 0 L 45 30" />
+          <path d="M 15 30 L 45 0" />
+        </g>
+      </g>
+    </svg>
+  </label>
+
+  <nav class="main-navigation">
     <div class="menu-wrapper">
       <h2 class="menu-title">&mdash; Menu &mdash;</h2>
 
       <ul class="menu-list">
-        <li>Strona Główna</li>
-        <li>O nas</li>
-        <li>Realizacje</li>
-        <li>Oferta</li>
-        <li>Kontakt</li>
+        <li><a href="#header">Strona Główna</a></li>
+        <li><a href="#about">O nas</a></li>
+        <li><a href="#gallery">Realizacje</a></li>
+        <li><a href="#offer">Oferta</a></li>
+        <li><a href="#contact">Kontakt</a></li>
       </ul>
 
       <div class="menu-kontakt">
         <h3 class="h3">tel.: 791000394</h3>
-        <h3 class="h3">adr.: ul. Zawadiaki 54</h3>
+        <h3 class="h3">adr.: ul. Fryzjerska 54</h3>
         <hr>
       </div>
     </div>
-  </section>
+  </nav>
+
 
 
   <!--HEADER-->
