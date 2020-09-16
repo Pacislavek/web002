@@ -11,6 +11,11 @@
   --gold-bot: linear-gradient(to bottom, #EEB609, #FCC201);
   --gold-left: linear-gradient(to left, #EEB609, #FCC201);
   --gold-right: linear-gradient(to right, #EEB609, #FCC201);
+
+  --roboto: 'Roboto', sans-serif;
+  --opensans: 'Open Sans', sans-serif;
+  --poppins: 'Poppins', sans-serif;
+  --parisiene: 'Parisienne', sans-serif;
 }
 
 h1 {
@@ -58,8 +63,23 @@ body {
 
 .header-text-wrapper {
   display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 4em;
+  margin-top: 25vh;
+}
+
+.header-title {
+  font-size: 88px;
+  text-shadow: 1px 2px 9px rgba(0,0,0,0.7);
+}
+
+.golden-text {
+  background: var(--gold-right);
+  padding: 12px;
+}
+
+.header-subtitle {
+  text-shadow: 1px 2px 5px rgba(0,0,0,0.7);
 }
 
 /*SERVICES*/
@@ -68,7 +88,8 @@ body {
   display: flex;
   justify-content: space-around;
   position: absolute;
-  bottom: 0; left: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: auto;
 }
@@ -76,7 +97,7 @@ body {
 .service {
   display: block;
   position: relative;
-  width: 19.6%;
+  width: 20%;
   height: 227px;
   background-color: black;
   overflow: hidden;
@@ -88,7 +109,7 @@ body {
 
 .service:hover {
   transform: translateY(-5px);
-  opacity: 0.95;
+  opacity: 1;
 }
 
 .service:before {
@@ -130,7 +151,7 @@ body {
 
 .service-title {
   display: block;
-  font-size: 28px;
+  font-size: 35px;
   color: rgba(255, 255, 255, 0.87);
   font-family: 'Parisienne', sans-serif;
   text-align: center;
@@ -142,7 +163,7 @@ body {
   right: 0;
   height: 50px;
   cursor: pointer;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.4);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
 }
 
 .service:hover .service-image,
@@ -174,21 +195,24 @@ body {
 /* SERVICES IMGS */
 
 .img-one {
-  background-image: url(../img/terminal-scissors.jpg);
+  background-image: url(../img/girl-haircut.jpg);
+  background-position: center;
 }
 
 .img-two {
-  background-image: url();
+  background-image: url(../img/man-haircut.jpg);
 }
 
 .img-three {
-  background-image: url();
+  background-image: url(../img/colorization.jpg);
 }
 
 .img-four {
-  background-image: url();
+  background-image: url(../img/stylization.jpg);
+  background-position: center;
 }
 
 .img-five {
-  background-image: url();
+  background-image: url(../img/hair-dyeing.jpg);
+  background-position: center;
 }
