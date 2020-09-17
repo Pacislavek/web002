@@ -7,7 +7,7 @@
 
   --h1b-color: #505050;
   --h2b-color: #404040;
-  --pb-color: rgba(0,0,0,0.86);
+  --pb-color: rgba(0, 0, 0, 0.86);
 
   --gold: #EEB609;
   --gold-light: #FCC201;
@@ -145,10 +145,11 @@ p {
 
 .main-navigation-toggle + label {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 30px;
   cursor: pointer;
   z-index: 2;
+  filter: drop-shadow(-1px 1px 2px rgba(0, 0, 0, 0.4));
 }
 
 .menu-name {
@@ -212,7 +213,7 @@ p {
   background-color: rgba(0, 0, 0, 0.8);
   transform-origin: 0 50%;
   z-index: -1;
-  box-shadow: -3px 0 8px rgba(0,0,0,0.45);
+  box-shadow: -3px 0 8px rgba(0, 0, 0, 0.45);
 }
 
 .main-navigation ul {
@@ -227,6 +228,7 @@ p {
   align-items: center;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .main-navigation li:after {
@@ -252,6 +254,10 @@ p {
   user-select: none;
   padding: var(--space) calc(var(--space) * 2) calc(var(--space) + var(--border-size) / 2);
   transform: translateY(100%);
+}
+
+.main-navigation li:hover {
+  transform: translateX(10px);
 }
 
 .main-navigation-toggle:checked ~ label .icon--menu-toggle .icon-group {
@@ -536,14 +542,14 @@ body {
 }
 
 .banner-wrapper {
-  border: 1px solid rgba(0,0,0,0.12);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   height: 100%;
   min-height: 350px;
   width: 100%;
   position: relative;
   display: flex;
   align-items: center;
-  box-shadow: 0 1px 13px rgba(0,0,0,0.14);
+  box-shadow: 0 1px 13px rgba(0, 0, 0, 0.14);
 }
 
 .banner-wrapper:before {
@@ -553,7 +559,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),  url(../img/model.jpg);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../img/model.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 23%;
@@ -572,7 +578,7 @@ body {
 
 .title-banner {
   letter-spacing: 1.1;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .desc-banner {
@@ -587,7 +593,7 @@ body {
   font-size: 17px;
   color: white;
   padding: 8px 18px;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.24);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s;
 }
 
@@ -599,7 +605,7 @@ body {
   background: var(--gold-top);
   font-family: var(--poppins);
   padding: 4px 6px;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.24);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
   text-align: center;
 }
 
@@ -618,14 +624,24 @@ body {
 .about-services:before {
   content: '';
   position: absolute;
-  top: 0; left: 0;
-  background-image: url(../img/flower-bg.jpg);
+  top: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(235, 235, 235, 0.5), rgba(255, 235, 235, 0.98)), url(../img/flower-bg.jpg);
   width: 100%;
   height: 100%;
   background-attachment: fixed;
   -webkit-background-size: cover;
   background-size: cover;
-  filter: saturate(0.2) brightness(1.18);
+  filter: saturate(0.2);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cards-title {
+  font-family: var(--opensans);
+  font-size: 40px;
+  color: #505050;
+  font-weight: 300;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 .cards-deck {
@@ -633,10 +649,62 @@ body {
   justify-content: space-around;
   min-height: 100px;
   padding: 1.25rem 1.25rem;
-  margin: 0 10%;
+  margin: 0% 10%;
+  z-index: 1;
 
 }
 
 .card {
   width: 28%;
+  padding: 18px 20px;
+  min-height: 400px;
+  box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.22);
+  transition: all 0.4s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 1px 3px 11px rgba(0, 0, 0, 0.22);
+}
+
+.card-body {
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.card-icon {
+  margin-top: 15px;
+  width: 90px;
+  align-self: center;
+  opacity: 0.8;
+}
+
+.card-title {
+  font-family: var(--poppins);
+  font-size: 26px;
+}
+
+.card-desc {
+  color: rgba(0, 0, 0, 0.66);
+  font-family: var(--opensans);
+}
+
+.card-button {
+  background: #BF953F;
+  background: linear-gradient(to right, #BF953F, #FCF6BA);
+  color: white;
+  font-family: var(--poppins);
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
+  padding: 6px 13px;
+  border: none;
+  transition: all 0.3s ease-in;
+}
+
+.card-button:hover {}
+
+/* GALLERY & REALIZATIONS */
+
+#gallery {
+  min-height: 80vh;
 }
