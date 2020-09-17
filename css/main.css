@@ -795,9 +795,13 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to bottom, #202020, #808080);
-  opacity: 0.5;
+  background: black;
+  opacity: 0.55;
   z-index: 1;
+}
+
+.video-title {
+  font-family: var(--poppins);
 }
 
 #offer {
@@ -828,6 +832,11 @@ body {
   font-family: var(--poppins);
   font-size: 16px;
   color: rgba(0,0,0,0.7);
+}
+
+.subtitle {
+  font-size: 15px;
+  color: rgba(0,0,0,0.54);
 }
 
 .offer-price {
