@@ -758,3 +758,90 @@ body {
     filter: grayscale(0) brightness(1);
   }
 }
+
+/* OFFER */
+
+#offerVideo {
+  position: relative;
+  background-color: black;
+  height: 36vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+#offerVideo video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 50%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#offerVideo .container {
+  position: relative;
+  z-index: 2;
+}
+
+#offerVideo .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #202020, #808080);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+#offer {
+  min-height: 80vh;
+}
+
+.offer-wrapper {
+}
+
+.offer-title {
+  font-family: var(--poppins);
+  color: rgba(0,0,0,0.66);
+}
+
+.offer-details {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.offer-name {
+  font-family: var(--poppins);
+  font-size: 17px;
+}
+
+.offer-subname {
+  font-family: var(--poppins);
+  font-size: 16px;
+  color: rgba(0,0,0,0.7);
+}
+
+.offer-price {
+  font-size: 15px;
+}
+
+.offer-details hr {
+  position: absolute;
+  background-color: rgba(0,0,0,0.001);
+  height: 1px;
+  bottom: -22px;
+  width: 100%;
+}
+
+.currency {
+  color: rgba(0,0,0,0.5);
+}
