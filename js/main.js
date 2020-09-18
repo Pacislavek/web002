@@ -25,13 +25,18 @@ function showOfferM() {
 }
 
 //SHOW PHONE WHEN SCROLLED THERE
-$(window).on('scroll', function () {
-  if ($(window).scrollTop() >= $(
-      '#offer').offset().top + $('#offer').outerHeight() - window.innerHeight) {
+window.addEventListener('DOMContentLoaded', () => {
+  let sec = document.querySelector('#offer');
+  let btn = sec.querySelector('.call-button');
 
-    $('.call-button').fadeIn();
+  let secTopDis = sec.offsetTop;
+  let secBottomDis = secTopDis + sec.offsetHeight;
 
-  } else {
-    $('.call-button').fadeOut();
-  }
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset >= secTopDis && window.pageYOffset <= secBottomDis)
+      btn.classList.add('visible');
+    else
+      btn.classList.remove('visible');
+  });
 });
+
