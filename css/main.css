@@ -89,6 +89,23 @@ p {
   z-index: 99;
 }
 
+.button-to-top {
+  display: block;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  color: whitesmoke;
+  font-size: 33px;
+  z-index: 99;
+  background-color: rgba(0,0,0,0.5);
+  outline: none;
+  border: none;
+  text-align: center;
+  padding: 3px 0;
+}
+
 .menu-wrapper {
   display: flex;
   justify-content: center;
@@ -688,6 +705,14 @@ body {
 .card-desc {
   color: rgba(0, 0, 0, 0.66);
   font-family: var(--opensans);
+}
+
+#about a {
+  display: contents;
+}
+
+#about a:hover {
+  text-decoration: none;
 }
 
 .card-button {

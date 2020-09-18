@@ -40,3 +40,33 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+//scroll to top
+var toTop = document.getElementById('scrolltotop');
+
+//window chceck scroll position
+window.onscroll = function () {
+  "use strict";
+
+  if (document.body.scrollTop >= 200 && window.innerWidth > 1000) {
+    toTop.style.display = "block";
+  } else {
+
+    if (window.innerWidth < 1000) {} else {}
+    toTop.style.display = "none";
+  }
+
+};
+
+//window on load check scroll location
+$(window).on("load", function () {
+  "use strict";
+
+  if (document.body.scrollTop >= 200 && window.innerWidth > 1000) {
+    toTop.style.display = "block";
+  } else {
+
+    if (window.innerWidth < 1000) {} else {}
+    toTop.style.display = "none";
+  }
+
+});
