@@ -806,9 +806,61 @@ body {
 
 #offer {
   min-height: 80vh;
+  position: relative;
+}
+
+.call-button {
+  position: fixed;
+  width: 170px;
+  height: 50px;
+  top: 50px;
+  left: 0px;
+  background-color: limegreen;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  padding-right: 10px;
+  transform: translateX(-120px);
+  transition: all 0.3s ease-in-out;
+  z-index: 22;
+}
+
+.call-button:hover {
+  transform: translateX(0px);
+}
+
+.call-button span {
+  margin-right: 18px;
+  font-size: 18px;
+  color: white;
+}
+
+.call-button i {
+  font-size: 33px;
+}
+
+.choose-sex-button {
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 8px 15px;
+  background: transparent;
+  font-family: var(--poppins);
+  font-size: 18px;
+  margin: 0 8px;
+}
+
+.choose-sex-button:disabled {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  filter: brightness(0.9);
+}
+
+#manOfferL, #manOfferR {
+  display: none;
 }
 
 .offer-wrapper {
+  width: 100%;
 }
 
 .offer-title {
@@ -841,7 +893,7 @@ body {
 }
 
 .offer-price {
-  width: 15%;
+  width: 20%;
   font-size: 15px;
   text-align: right;
 }
