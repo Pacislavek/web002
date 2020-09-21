@@ -1060,7 +1060,7 @@ body {
 }
 
 /*Small devices (landscape phones, less than 768px)*/
-@media (max-width: 767.98px) {
+@media (min-width: 576px) {
   .header-text-wrapper {
     margin-left: 0;
     justify-content: center;
@@ -1073,14 +1073,14 @@ body {
 }
 
 /*Medium devices (tablets, less than 992px)*/
-@media (max-width: 991.98px) {
+@media (min-width: 768px) {
     .main-navigation {
     width: 40%;
   }
 }
 
 /*// Large devices (desktops, less than 1200px)*/
-@media (max-width: 1199.98px) {
+@media (min-width: 1200px) {
   .header-text-wrapper {
     margin-left: 0;
     justify-content: center;
